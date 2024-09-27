@@ -10,7 +10,9 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("https://thankful-pebble-0f484ff03.5.azurestaticapps.net/")
+                .allowedOrigins("https://thankful-pebble-0f484ff03.5.azurestaticapps.net/", "http://localhost:4200")
+                .allowedHeaders("*")
                 .allowedMethods("GET", "POST");
+
     }
 }
